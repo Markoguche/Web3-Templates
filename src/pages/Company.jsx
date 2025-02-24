@@ -2,7 +2,7 @@
 
 const Company = () => {
   return (
-    <div className="text-sm flex gap-3 font-thin ">
+    <div className="text-sm sm:block lg:flex gap-3 font-thin ">
      
       <div>
         <h1 className="mb-2">About Circle</h1>
