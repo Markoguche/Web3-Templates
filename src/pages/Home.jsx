@@ -29,7 +29,7 @@ const Home = () => {
         x: {
           repeat: Infinity,
           repeatType: 'loop',
-          duration: 200, // 1.5x faster
+          duration: 66, // 1.5x faster
           ease: 'linear',
         },
       },
@@ -40,7 +40,7 @@ const Home = () => {
     <div>
       {/* First section with both background color and image */}
       <div
-        className="container mx-auto border-none sm:w-auto lg:w-[2000px] p-28"
+        className="container mx-auto border-none w-[2000px] p-28"
         style={{
           backgroundImage: `url(${BG})`,
           backgroundSize: 'cover',
@@ -49,15 +49,15 @@ const Home = () => {
           backgroundColor: '#edf1fc', 
         }}
       >
-        <h1 className="text-4xl font-extrabold text-[#363148] mt-12 text-center">
+        <h1 className="text-6xl font-extrabold text-[#363148] mt-12 text-center">
           Money is now open
         </h1>
-        <p className="mt-6 lg:text-2xl md:text-lg font-medium text-gray-700 text-center">
+        <p className="mt-6 text-2xl font-medium text-gray-700 text-center">
           Move money faster and more securely with USDC, the digital <br /> dollar made for businesses and developers around the world.
         </p>
         
         {/* Center the cards */}
-        <div className="mt-12 lg:flex sm:block lg:justify-center  lg:space-x-4">
+        <div className="mt-12 flex justify-center space-x-4">
           <Card
             header="Cross-border payment"
             text="Expand your reach with near instance settlement and lower cost"
@@ -96,19 +96,19 @@ const Home = () => {
         </motion.div>
       </div>
 
-      {/* Section with Bitcoin background */}
+      {/* Last section with Bitcoin background */}
       <div
-        className='text-[#29233b] lg:h-[550px] content-center'
+        className='text-[#29233b] h-[550px] content-center'
         style={{
           backgroundImage: `url(${Bitcoin})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <h1 className='text-6xl font-bold mb-6 mt-8 ml-24'>
+        <h1 className='text-5xl font-bold mb-6 mt-8 ml-24'>
           USDC is the stablecoin <br /> powering global business
         </h1>
-        <div className='grid grid-cols-2 ml-24 '>
+        <div className='grid grid-cols-2 ml-24'>
           <div >
             <span className='text-xl font-semibold'>
               Stable
@@ -121,7 +121,7 @@ const Home = () => {
               Supported on 15+ blockchain networks <br /> and trusted by developers
             </p>
           </div>
-          <div className='mt-8 mb-8'>
+          <div className='mt-8'>
             <span className='text-xl font-semibold'>
               Always on
             </span>
@@ -135,33 +135,32 @@ const Home = () => {
               Reserve attestations are published <br /> monthly
             </p>
           </div>
-        <button className='h-10 w-44 rounded-lg text-white font-bold bg-[#29233b] mb-8'>
+        </div>
+        <button className='h-10 w-44 rounded-lg text-white font-bold bg-[#29233b] mt-8 ml-24'>
           SEE WHY USDC
         </button>
+      </div>
+      <div className='h-[550px] content-center'
+      style={{
+        backgroundImage: `url(${Blockchain})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+      >
+        <div className='text-white ml-[650px]'>
+          <img src={Dev} alt="Developerlabel" className='h-12 mb-6 ' />
+          <h1 className='text-5xl font-bold mb-2'>An open platform for <br />programmable money</h1>
+          <p className='text-2xl'>
+            Circle’s open developer platform makes it faster,
+            easier, <br /> and safer to tap into the global reach of the blockchain.
+            <br />Start with our suite of smart contracts, APIs,
+            and SDKs <br />designed to get you off the ground quickly and securely.
+          </p>
+          <button className='h-12 w-48 mt-6 bg-[#8656ef] rounded-lg font-semibold'>
+              VISIT DEVELOPERS HUB
+          </button>
         </div>
       </div>
-      
-      <div 
-      className="h-[550px] content-center bg-cover bg-center"
-      style={{ backgroundImage: `url(${Blockchain})` }}
-      >
-      <div className="text-white lg:ml-[650px] sm:ml-0 sm:text-center sm:flex sm:flex-col sm:items-center">
-      <img src={Dev} alt="Developerlabel" className="h-12 mb-6 sm:mx-auto" />
-      <h1 className="lg:text-5xl font-bold mb-2 sm:text-3xl">
-        An open platform for <br className="hidden sm:block" /> programmable money
-      </h1>
-      <p className="lg:text-2xl sm:text-lg sm:px-6">
-        Circle’s open developer platform makes it faster,  
-        easier, <br className="hidden sm:block" /> and safer to tap into the global reach of the blockchain.
-        <br className="hidden sm:block" /> Start with our suite of smart contracts, APIs,  
-        and SDKs <br className="hidden sm:block" /> designed to get you off the ground quickly and securely.
-      </p>
-      <button className="h-12 w-48 mt-6 bg-[#8656ef] rounded-lg font-semibold sm:mx-auto">
-        VISIT DEVELOPERS HUB
-      </button>
-  </div>
-</div>
-
 
 <div className='h-[1350px]'
   style={{
@@ -171,11 +170,11 @@ const Home = () => {
     backgroundColor: '#edf1fc',
   }}
 >
-  <h1 className='text-5xl font-bold  lg:ml-24 pt-24 pb-16 sm:ml-2'>
+  <h1 className='text-5xl font-bold ml-24 pt-24 pb-16'>
     Businesses and developers around the <br />world help people use USDC
   </h1>
   
-  <div className='lg:mx-24 sm:mx-4 grid lg:grid-cols-2 sm:grid-cols-1 gap-4'>
+  <div className='mx-24 grid grid-cols-2 gap-4'>
     <div className="relative group">
       <img src={White} alt="white" className='h-[450px] rounded-xl' />
       
@@ -219,7 +218,7 @@ const Home = () => {
     </div>
   </div>
 
-  <div className='lg:mx-24 sm:mx-4 grid lg:grid-cols-3 sm:grid-cols-1 gap-4 mt-8'>
+  <div className='mx-24 grid grid-cols-3 gap-4 mt-8'>
     <div className='relative group'>
       <img src={Nurse} alt="nurse" className='h-[450px] w-full object-cover rounded-xl' />
 
@@ -281,7 +280,7 @@ const Home = () => {
   </div>
 </div>
 
-    <div className='grid lg:grid-cols-2 md:grid-row h-[350px] '>
+    <div className='grid grid-cols-2 h-[350px] '>
       <div className=' content-center text-center'
       style={{
           backgroundImage: `url(${Blue})`,
@@ -299,13 +298,119 @@ const Home = () => {
           backgroundPosition: 'center', 
         }}
       >
-
-      <h1 className=' text-3xl xl:text-5xl font-bold'>Explore resources to <br />start building with USDC</h1>
+      <h1 className='text-5xl font-bold'>Explore resources to <br />start building with USDC</h1>
       <button className='bg-[#8656ef] font-semibold my-6 text-white h-12 w-48 rounded-lg'>VISIT DEVELOPERS HUB</button>
       </div>
     </div>
 
-    
+    <div className="bg-[#363148] py-12 ">
+  <div className="grid grid-cols-5 gap-4 text-white text-sm mx-24">
+    <div className="space-y-4">
+      <h2 className="text-lg font-bold">USDC</h2>
+      <ul className=" pl-4 space-y-2">
+        <li>About USDC</li>
+        <li>Transparency</li>
+        <li>Supported blockchains</li>
+        <li>Bridged USDC Standard</li>
+        <li>USDC.com</li>
+      </ul>
+    </div>
+
+    <div className="space-y-4">
+      <h2 className="text-lg font-bold">SOLUTIONS</h2>
+      <ul className=" pl-4 space-y-2">
+        <li>Cross-border payments</li>
+        <li>Global dollar access</li>
+        <li>Crypto capital markets</li>
+        <li>Case studies</li>
+      </ul>
+    </div>
+
+    <div className="space-y-4">
+      <h2 className="text-lg font-bold">DEVELOPER</h2>
+      <ul className=" pl-4 space-y-2">
+        <li>Developer Hub</li>
+        <li>Documentation</li>
+        <li>Interactive quickstarts</li>
+        <li>Web3 Services account signup</li>
+        <li>Developer blog</li>
+        <li>Circle Research</li>
+        <li>Testnet Faucet</li>
+        <li>Test with sample app</li>
+        <li>Uptime status</li>
+      </ul>
+    </div>
+
+    <div className="space-y-4">
+      <h2 className="text-lg font-bold">RESOURCES</h2>
+      <ul className=" pl-4 space-y-2">
+        <li>Case studies</li>
+        <li>Blog</li>
+        <li>State of the USDC Economy</li>
+        <li>Executive Insights</li>
+        <li>The Money Movement</li>
+        <li>Policy Hub</li>
+        <li>Glossary</li>
+        <li>Brand kit</li>
+      </ul>
+    </div>
+
+    <div className="space-y-4">
+      <h2 className="text-lg font-bold">SUBSCRIBE TO THE CIRCLE NEWSLETTER</h2>
+      <div className="flex flex-col space-y-4">
+        <input 
+          type="email" 
+          placeholder="Enter your email address" 
+          className="p-2 border border-gray-300 rounded-md" 
+        />
+        <button 
+          className="bg-purple-600 text-white p-2 rounded-md hover:bg-purple-700"
+        >
+          Subscribe
+        </button>
+        <p className="text-xs text-gray-300">
+          By submitting this form, you agree to receive marketing and other communications from Circle about the Circle Products and other company updates. You can unsubscribe from these communications at any time. For more information on our privacy practices, please review our Privacy Policy.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="grid grid-cols-3 gap-4 text-white text-sm mt-12 mx-24">
+    <div className="space-y-4">
+      <h2 className="text-lg font-bold">PRODUCTS</h2>
+      <ul className="pl-4 space-y-2">
+        <li>USDC</li>
+        <li>EURC</li>
+        <li>Circle Mint</li>
+        <li>Cross-Chain Transfer Protocol (CCTP)</li>
+        <li>Programmable Wallets</li>
+        <li>Smart Contract Platform</li>
+      </ul>
+    </div>
+
+    <div className="space-y-4">
+      <h2 className="text-lg font-bold">SUPPORT</h2>
+      <ul className=" pl-4 space-y-2">
+        <li>Circle Help</li>
+        <li>Contact us</li>
+        <li>Legal & privacy</li>
+      </ul>
+    </div>
+
+    <div className="space-y-4">
+      <h2 className="text-lg font-bold">COMPANY</h2>
+      <ul className=" pl-4 space-y-2">
+        <li>About us</li>
+        <li>Careers We’re Hiring</li>
+        <li>Pressroom</li>
+        <li>Alliance Program</li>
+        <li>Circle Impact</li>
+        <li>Circle Ventures</li>
+        <li>Investor Relations</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
     </div>
 
